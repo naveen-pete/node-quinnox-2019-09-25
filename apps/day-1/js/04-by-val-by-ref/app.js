@@ -28,6 +28,7 @@ console.log(c);
 console.log(d);
 
 // equals operator sets up new memory space (new address)
-c = { greeting: 'howdy' };
+c = { greeting: 'hi' };
 console.log(c);
 console.log(d);
+

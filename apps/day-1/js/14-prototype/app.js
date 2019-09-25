@@ -1,8 +1,8 @@
 var person = {
     firstname: 'Default',
     lastname: 'Default',
-    getFullName: function() {
-        return this.firstname + ' ' + this.lastname;  
+    getFullName: function () {
+        return this.firstname + ' ' + this.lastname;
     }
 }
 
@@ -17,14 +17,14 @@ console.log(john.getFullName());
 console.log(john.firstname);
 
 var jane = {
-    firstname: 'Jane'   
+    firstname: 'Jane'
 }
 
 jane.__proto__ = person;
 console.log(jane.getFullName());
 
-person.getFormalFullName = function() {
-    return this.lastname + ', ' + this.firstname;   
+person.getFormalFullName = function () {
+    return this.lastname + ', ' + this.firstname;
 }
 
 console.log(john.getFormalFullName());

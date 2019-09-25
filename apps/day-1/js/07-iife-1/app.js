@@ -1,33 +1,43 @@
 // function statement
-function greet(name) {
-    console.log('Hello ' + name);   
-}
-greet('John');
+// function greet(name) {
+//     console.log('Hello ' + name);   
+// }
+// greet('John');
 
 // using a function expression
-var greetFunc = function(name) {
-    console.log('Hello ' + name);
-};
-greetFunc('John');
+// var greetFunc = function(name) {
+//     console.log('Hello ' + name);
+// };
+// greetFunc('John');
+
+
 
 // using an Immediately Invoked Function Expression (IIFE)
-var greeting = function(name) {
-    
-    return 'Hello ' + name;
-    
-}('John');
+var app = (function () {
+    var map = function () {
+        console.log('app.map() function');
+    }
 
-console.log(greeting);
+    var myapp = {
+        map: map
+    }
 
-// IIFE
-var firstname = 'John';
+    // console.log( 'Hello ' + name);
+    return myapp;
 
-(function(name) {
-    
-    var greeting = 'Inside IIFE: Hello';
-    console.log(greeting + ' ' + name);
-    
-}(firstname)); // IIFE
+})();
+
+app.map();
+
+// // IIFE
+// var firstname = 'John';
+
+// (function(name) {
+
+//     var greeting = 'Inside IIFE: Hello';
+//     console.log(greeting + ' ' + name);
+
+// }(firstname)); // IIFE
 
 
 

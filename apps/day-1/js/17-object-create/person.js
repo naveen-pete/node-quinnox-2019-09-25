@@ -1,6 +1,6 @@
 var personProto = {
   calculateAge: function () {
-    console.log(2016 - this.yearOfBirth);
+    console.log(2019 - this.yearOfBirth);
   }
 };
 

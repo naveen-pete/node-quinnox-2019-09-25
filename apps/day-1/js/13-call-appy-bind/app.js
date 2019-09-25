@@ -5,7 +5,9 @@ var john = {
 
   presentation: function (style, timeOfDay) {
     if (style === 'formal') {
-      console.log('Good ' + timeOfDay + ', Ladies and gentlemen! I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old.');
+      console.log(
+        `Good ${timeOfDay}, Ladies and gentlemen! I'm ${this.name}, I'm a ${this.job} and I'm ${this.age} years old.`
+      );
     } else if (style === 'friendly') {
       console.log('Hey! What\'s up? I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old. Have a nice ' + timeOfDay + '.');
     }
@@ -19,12 +21,13 @@ var emily = {
 };
 
 john.presentation('formal', 'morning');
-john.presentation.call(emily, 'friendly', 'afternoon');
-//john.presentation.apply(emily, ['friendly', 'afternoon']);
 
-var johnFriendly = john.presentation.bind(john, 'friendly');
-johnFriendly('morning');
-johnFriendly('night');
+// john.presentation.call(emily, 'friendly', 'afternoon');
+// john.presentation.apply(emily, ['formal', 'morning']);
 
-var emilyFormal = john.presentation.bind(emily, 'formal');
-emilyFormal('afternoon');
+var johnFriendly = john.presentation.bind(emily, 'friendly', 'afternoon');
+johnFriendly();
+// johnFriendly('night');
+
+// var emilyFormal = john.presentation.bind(emily, 'formal');
+// emilyFormal('afternoon');

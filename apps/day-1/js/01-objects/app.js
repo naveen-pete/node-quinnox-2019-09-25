@@ -1,21 +1,28 @@
 var person = new Object();
 
-person["firstname"] = "John";
-person["lastname"] = "Doe";
+// dot notation
+person.firstname = "John";
+person.lastname = "Doe";
 
-var firstNameProperty = "firstname";
+// array access 
+// person["firstname"] = "John";
+// person["lastname"] = "Doe";
 
-console.log(person);
-console.log(person[firstNameProperty]);
+// var firstNameProperty = "firstname";
 
-console.log(person.firstname);
-console.log(person.lastname);
+// console.log(person[firstNameProperty]);
+
+// console.log(person.firstname);
+// console.log(person.lastname);
 
 person.address = new Object();
 person.address.street = "111 Main St.";
 person.address.city = "New York";
 person.address.state = "NY";
 
-console.log(person.address.street);
-console.log(person.address.city);
+console.log(person);
+
+// console.log(person.address.street);
+// console.log(person.address.city);
+
 console.log(person["address"]["state"]);
